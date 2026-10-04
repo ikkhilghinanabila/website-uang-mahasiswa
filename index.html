@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uangmu, Tanggung Jawabmu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Uangmu<span>,</span><br>Tanggung Jawabmu</div>
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#panduan">Panduan</a>
+      <a href="#hitung">Coba Hitung</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="beranda" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">PANDUAN KEUANGAN MAHASISWA</p>
+        <h1>Uang bulananmu<br>habis untuk apa?</h1>
+        <p class="hero-desc">
+          Mengelola uang bukan berarti tidak boleh menikmati hasilnya.
+          Yang penting, tahu mana yang harus didahulukan.
+        </p>
+        <a href="#panduan" class="button">Mulai Kelola Uangmu ↓</a>
+      </div>
+
+      <div class="money-card">
+        <div class="card-label">CONTOH ANGGARAN</div>
+        <div class="amount">Rp1.500.000</div>
+        <div class="progress"><span></span></div>
+        <div class="mini-row"><span>Kebutuhan</span><strong>Rp900.000</strong></div>
+        <div class="mini-row"><span>Tabungan</span><strong>Rp300.000</strong></div>
+        <div class="mini-row"><span>Keinginan</span><strong>Rp300.000</strong></div>
+        <div class="balance">Sisa terencana: <b>Rp0</b></div>
+      </div>
+    </section>
+
+    <section id="panduan" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">MULAI DARI YANG SEDERHANA</p>
+        <h2>Kenali keuanganmu.</h2>
+        <p>Empat langkah kecil yang bisa membantu uangmu lebih terarah.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <h3>Catat</h3>
+          <p>Tulis pemasukan dan pengeluaranmu agar tahu ke mana uang pergi.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <h3>Prioritaskan</h3>
+          <p>Dahulukan kebutuhan seperti makan, transportasi, dan keperluan kuliah.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <h3>Batasi</h3>
+          <p>Tentukan batas untuk keinginan agar tidak mengganggu kebutuhan utama.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">04</span>
+          <h3>Sisihkan</h3>
+          <p>Simpan sebagian uang untuk kebutuhan mendatang atau keadaan darurat.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="needs">
+      <div>
+        <p class="eyebrow">SEBELUM MEMBELI</p>
+        <h2>Kebutuhan atau keinginan?</h2>
+        <p class="question">“Kalau tidak membelinya hari ini, apakah kamu tetap baik-baik saja?”</p>
+      </div>
+      <div class="compare">
+        <div class="compare-box need">
+          <h3>✓ Kebutuhan</h3>
+          <ul>
+            <li>Makan</li>
+            <li>Transportasi</li>
+            <li>Kos</li>
+            <li>Pulsa & internet</li>
+            <li>Keperluan kuliah</li>
+          </ul>
+        </div>
+        <div class="compare-box want">
+          <h3>＋ Keinginan</h3>
+          <ul>
+            <li>Nongkrong</li>
+            <li>Belanja karena diskon</li>
+            <li>Jajan berlebihan</li>
+            <li>Barang yang belum diperlukan</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="hitung" class="calculator-section">
+      <div class="section-heading">
+        <p class="eyebrow">COBA HITUNG</p>
+        <h2>Ke mana uangmu pergi?</h2>
+        <p>Masukkan anggaran bulananmu dan lihat hasil sederhananya.</p>
+      </div>
+
+      <div class="calculator">
+        <div class="form-group">
+          <label for="income">Uang bulanan</label>
+          <input type="number" id="income" min="0" placeholder="Contoh: 1500000">
+        </div>
+        <div class="form-group">
+          <label for="needsInput">Kebutuhan</label>
+          <input type="number" id="needsInput" min="0" placeholder="Contoh: 900000">
+        </div>
+        <div class="form-group">
+          <label for="savings">Tabungan</label>
+          <input type="number" id="savings" min="0" placeholder="Contoh: 300000">
+        </div>
+        <div class="form-group">
+          <label for="wants">Keinginan</label>
+          <input type="number" id="wants" min="0" placeholder="Contoh: 300000">
+        </div>
+        <button class="button calculate" onclick="calculateMoney()">Hitung Anggaran</button>
+
+        <div id="result" class="result" aria-live="polite">
+          <p>Hasil perhitungan akan muncul di sini.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-box">
+        <p class="eyebrow">INGAT</p>
+        <h2>Tidak perlu menunggu punya banyak uang untuk belajar mengelolanya.</h2>
+        <p>Mulai dari mencatat, menentukan prioritas, dan menyisihkan sedikit demi sedikit.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Uangmu, Tanggung Jawabmu</strong></p>
+    <p>Belajar mengelola uang, mulai dari sekarang.</p>
+  </footer>
+
+  <script>
+    function rupiah(number) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0
+      }).format(number);
+    }
+
+    function calculateMoney() {
+      const income = Number(document.getElementById('income').value) || 0;
+      const needs = Number(document.getElementById('needsInput').value) || 0;
+      const savings = Number(document.getElementById('savings').value) || 0;
+      const wants = Number(document.getElementById('wants').value) || 0;
+      const total = needs + savings + wants;
+      const balance = income - total;
+      const result = document.getElementById('result');
+
+      if (income <= 0) {
+        result.className = 'result warning';
+        result.innerHTML = '<strong>Masukkan uang bulanan terlebih dahulu.</strong>';
+        return;
+      }
+
+      if (balance < 0) {
+        result.className = 'result danger';
+        result.innerHTML = `
+          <strong>⚠️ Pengeluaranmu melebihi pemasukan.</strong>
+          <p>Total anggaran: ${rupiah(total)}<br>
+          Kekurangan: <b>${rupiah(Math.abs(balance))}</b></p>
+          <small>Coba kurangi bagian yang tidak terlalu penting.</small>
+        `;
+      } else if (balance === 0) {
+        result.className = 'result good';
+        result.innerHTML = `
+          <strong>✓ Anggaranmu pas.</strong>
+          <p>Total anggaran: ${rupiah(total)}<br>
+          Sisa: <b>${rupiah(balance)}</b></p>
+        `;
+      } else {
+        result.className = 'result good';
+        result.innerHTML = `
+          <strong>✓ Masih ada ruang dalam anggaranmu.</strong>
+          <p>Total anggaran: ${rupiah(total)}<br>
+          Sisa uang: <b>${rupiah(balance)}</b></p>
+          <small>Kalau belum punya tujuan untuk sisa uang ini, pertimbangkan untuk menabung.</small>
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
